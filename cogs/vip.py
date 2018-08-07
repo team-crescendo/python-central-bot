@@ -22,6 +22,9 @@ class VIP:
         i18n.set("file_type", "json")
         i18n.load_path.append(trans_conf['path'])
 
+    def __unload(self):
+        self.DB.close()
+
     async def on_ready(self):
         print(f" [VIP] Successfully loaded.")
 
@@ -54,7 +57,7 @@ class VIP:
                 return
 
             point = users.get_point(self.DB, user)
-            await ctx.bot.reply(t("admin.view_point").format(_target=f"<@{user}> ({user})", _point=point))
+            await ctx.bot.reply(t("admin.view_point").format(_target=f"<@{user}> ({user})", _uuid=uuid, _point=point))
                 
 
     @admin.error
@@ -63,6 +66,7 @@ class VIP:
             await ctx.bot.reply(t("messages.less_permission"))
 
         print(error)
+
 
 def setup(bot):
     bot.add_cog(VIP(bot))

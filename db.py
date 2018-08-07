@@ -34,6 +34,10 @@ class PostgreSQL:
 
         return self.cursor_dict[tid]
 
+    def close(self, tid=get_ident()):
+        if tid in self.conn_dict:
+            self.conn_dict[tid].close()
+
     # Run
     def run(self, query: str):
         cur = self.get_cursor()

@@ -21,6 +21,9 @@ class Attendance:
         i18n.load_path.append(trans_conf['path'])
 
     DB = PostgreSQL(**Config("config.ini").get("Database"))
+
+    def __unload(self):
+        self.DB.close()
     
     async def on_ready(self):
         print(" [ATd] Successfully loaded.")
