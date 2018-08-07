@@ -1,0 +1,6 @@
+{
+    "ko_KR": {
+        "no_uuid_found": "해당하는 UUID를 찾지 못했습니다.",
+        "view_point": "\r\n\r\n\tUser: {_target} \r\n\t{_point}p"
+    }
+}
