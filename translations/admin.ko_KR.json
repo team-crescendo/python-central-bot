@@ -1,6 +1,15 @@
 {
     "ko_KR": {
         "no_uuid_found": "해당하는 UUID를 찾지 못했습니다.",
-        "view_point": "\r\n\r\n\tUser: {_target} \r\n\t{_point}p"
+        "view_point": "\r\n```ini\r\n[ 기본 정보 ]\r\n유저이름 = '{_target}'\r\n디스코드ID = {_dsid}\r\n고유ID = '{_uuid}'\r\n유효함 = {_active}\r\n\r\n[ VIP내용 ]\r\n포인트 = {_point}p\r\n```",
+        "remote_register_success": "대리가입에 성공하였습니다.\r\n```markdown\r\n#가입정보\r\n- DCID: {_discord}\r\n- UUID: {_uuid}\r\n```",
+        "remote_register_fail": "대리가입 중 오류가 발생했습니다.",
+        "remote_register_already": "해당 유저는 이미 가입되어있습니다.",
+        "remote_unregister_really": "해당 유저를 정말 탈퇴시키겠습니까?",
+        "remote_unregister_success": "성공적으로 탈퇴 처리되었습니다.",
+        "remote_unregister_not_user": "해당 유저는 회원이 아닙니다.",
+        "invalid_discord_id": "올바르지 않은 아이디입니다.",
+        "error_remote_report": "Error was occured in Server({_server}), Channel(<#{_channel}>)\r\n\r\nError:\r\n{_error}",
+        "shutdown_really": "**(경고)** 정말로 봇을 종료하시겠습니까?"
     }
 }

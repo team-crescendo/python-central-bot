@@ -6,6 +6,10 @@
         "register_success": "성공적으로 가입되었습니다.",
         "register_request": "회원님의 가입 정보를 찾을 수 없습니다.\n`크센아 가입`을 통해서 회원등록을 마쳐주세요.",
         "register_already": "이미 회원이십니다.",
+        "register_inavailable": "가입하실 수 없습니다.",
+        "unregister_really": "정말로 회원탈퇴를 하시겠습니까?",
+        "unregister_success": "성공적으로 탈퇴처리되었습니다. 그동안 감사했습니다.",
+        "unregister_inavailable": "탈퇴하실 수 없습니다.",
         "error_call_admin": "처리중에 오류가 생겼습니다. 관리자에게 문의해주세요.",
         "attendance_success": "현재 서버시각 {time}에 출석체크가 완료되었습니다. 내일 또 봅시다!",
         "attendance_already": "오늘은 이미 출석하셨습니다. 내일 다시 출석합시다!"
