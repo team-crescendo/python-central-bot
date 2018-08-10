@@ -1,4 +1,4 @@
-from discord.ext import commands
+from override import CrescBot
 from settings import Config
 
 
@@ -13,7 +13,7 @@ cogs = [
 _conf = Config("config.ini")
 _token = _conf.get("Credential.token")
 
-bot = commands.Bot(command_prefix="크센아 ")
+bot = CrescBot(command_prefix="크센아 ")
 
 for cog in cogs:
     bot.load_extension(cog)
