@@ -6,7 +6,8 @@ cogs = [
     "cogs.test",
     "cogs.vip",
     "cogs.members",
-    "cogs.attendance"
+    "cogs.attendance",
+    "cogs.admin"
 ]
 
 _conf = Config("config.ini")
