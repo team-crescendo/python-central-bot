@@ -31,7 +31,7 @@ class Attendance:
     @checks.is_user(DB)
     @command("출석", pass_context=True)
     async def add_attendance(self, ctx):
-        uuid = users.get_uuid(self.DB, ctx.message.author.id)
+        _, uuid = users.get_uuid(self.DB, ctx.message.author.id)
 
         if uuid is None:
             await ctx.bot.reply(t("messages.register_request"))
@@ -55,6 +55,8 @@ class Attendance:
     async def error_add_attendance(self, error, ctx):
         if isinstance(error, CheckFailure):
             await ctx.bot.reply(t("messages.register_request"))
+
+        print(error)
 
 
 def setup(bot):
