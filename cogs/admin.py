@@ -75,7 +75,6 @@ class Administration:
         point = users.get_point(self.DB, uuid)
 
         _fake_ctx = Context(prefix="\0", message=Message(reactions=[], author={"id": user}))
-        print(_fake_ctx.message.author.id)
         valid = checks.is_valid(self.DB, False)(_fake_ctx)
         await ctx.bot.reply(t("admin.view_point") \
             .format(
@@ -121,7 +120,12 @@ class Administration:
     async def ad_unregister(self, ctx, *args):
         bot = ctx.bot
 
-        user = users.parse_mention(ctx.message.author.id)
+        if not args:
+            await bot.reply(t("admin.remote_unregister_require_specification"))
+            return
+
+        user, *args = args
+        user = users.parse_mention(user)
         _, uuid = users.get_uuid(self.DB, user)
 
         if not uuid:
@@ -134,6 +138,8 @@ class Administration:
         if not len(user) == 18:
             await bot.reply(t('admin.invalid_discord_id'))
             return
+
+        await self.ad_view.callback(self, ctx, user)
 
         async def callback():
             self.DB.run(f"DELETE FROM attendance WHERE uuid='{uuid}';")
