@@ -8,6 +8,7 @@
         "remote_unregister_really": "해당 유저를 정말 탈퇴시키겠습니까?",
         "remote_unregister_success": "성공적으로 탈퇴 처리되었습니다.",
         "remote_unregister_not_user": "해당 유저는 회원이 아닙니다.",
+        "remote_unregister_require_specification": "한 회원을 특정지어주십시오.",
         "invalid_discord_id": "올바르지 않은 아이디입니다.",
         "error_remote_report": "Error was occured in Server({_server}), Channel(<#{_channel}>)\r\n\r\nError:\r\n{_error}",
         "shutdown_really": "**(경고)** 정말로 봇을 종료하시겠습니까?"
